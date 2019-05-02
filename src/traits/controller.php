@@ -11,6 +11,10 @@
 
 namespace WP_Framework_Controller\Traits;
 
+use WP_Framework;
+use WP_Framework_Core\Traits\Singleton;
+use WP_Framework_Presenter\Traits\Presenter;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -18,10 +22,10 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 /**
  * Trait Controller
  * @package WP_Framework_Controller\Traits
- * @property \WP_Framework $app
+ * @property WP_Framework $app
  */
 trait Controller {
 
-	use \WP_Framework_Core\Traits\Singleton, \WP_Framework_Presenter\Traits\Presenter;
+	use Singleton, Presenter;
 
 }

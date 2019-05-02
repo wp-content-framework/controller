@@ -11,6 +11,9 @@
 
 namespace WP_Framework_Controller\Classes\Controllers;
 
+use WP_Framework_Controller\Traits\Controller;
+use WP_Framework_Core\Traits\Hook;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -21,6 +24,6 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 abstract class Base implements \WP_Framework_Core\Interfaces\Hook, \WP_Framework_Controller\Interfaces\Controller {
 
-	use \WP_Framework_Core\Traits\Hook, \WP_Framework_Controller\Traits\Controller;
+	use Hook, Controller;
 
 }
